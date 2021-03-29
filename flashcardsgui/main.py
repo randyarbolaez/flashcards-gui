@@ -1,8 +1,13 @@
 #!/usr/bin/env python
-from PyQt5.QtWidgets import QApplication, QLabel
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout
 
 app = QApplication([])
-label = QLabel('Hello World!')
-label.show()
+window = QWidget()
+layout = QVBoxLayout()
+layout.addWidget(QPushButton('Top'))
+layout.addWidget(QPushButton('Bottom'))
+window.setLayout(layout)
+window.setWindowTitle('FlashCards | Study App')
+window.show()
 app.exec()
 
